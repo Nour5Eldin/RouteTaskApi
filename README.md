@@ -3,6 +3,12 @@
 ## Overview
 RouteTaskApi is an Android application for creating and displaying a list of products using an API. This project demonstrates the use of modern Android development practices and libraries.
 
+## Screen Shot
+
+<img width="375" alt="Screenshot 2024-07-11 at 2 32 58 PM" src="https://github.com/Nour5Eldin/RouteTaskApi/assets/145837378/95b258e5-109e-457d-b023-af1b352694b0">
+
+
+
 ## Features
 - Fetch products from a remote API
 - Display products in a list
@@ -34,3 +40,8 @@ RouteTaskApi is an Android application for creating and displaying a list of pro
 1. Clone the repository:
    ```sh
    git clone https://github.com/Nour5Eldin/RouteTaskApi.git
+
+## License
+- **This project is licensed under the MIT License. See the LICENSE file for details.
+
+
