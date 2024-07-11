@@ -24,11 +24,11 @@ RouteTaskApi is an Android application for creating and displaying a list of pro
 - Network: (ApiService , NetworkModule)
   
 ## Topic Covered
-. Networking: Using Retrofit for making API requests
-. Image Loading: Using Glide for efficient image loading and caching
-. Architecture Components: ViewModel and LiveData
-. Dependency Injection: Using Dagger/Hilt (if applicable)
-. Error Handling: Handling network errors gracefully
+- Networking: Using Retrofit for making API requests
+- Image Loading: Using Glide for efficient image loading and caching
+- Architecture Components: ViewModel and LiveData
+- Dependency Injection: Using Dagger/Hilt (if applicable)
+- Error Handling: Handling network errors gracefully
 
 ## Setup
 1. Clone the repository:
