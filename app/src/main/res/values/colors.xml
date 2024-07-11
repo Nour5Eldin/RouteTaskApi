@@ -13,5 +13,4 @@
     <color name="transparent">#00000000</color>
     <color name="stroke_color">#4C06004F</color>
     <color name="pale_blue">#99004182</color>
-    <color name="like">@drawable/search_view_border</color>
 </resources>
