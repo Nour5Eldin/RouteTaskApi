@@ -2,9 +2,11 @@ package com.noureldin.route
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.widget.SearchView
 import com.noureldin.route.adapter.ProductAdapter
+import com.noureldin.route.api.ApiResponse
 import com.noureldin.route.databinding.ActivityMainBinding
 import com.noureldin.route.mvvm.ProductViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,8 +23,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.recyclerview.adapter = adapter
 
-        viewModel.products.observe(this) { products ->
-            adapter.setProducts(products)
+        viewModel.products.observe(this) { response ->
+            when (response) {
+                is ApiResponse.Success -> {
+                    adapter.setProducts(response.data)
+                }
+                is ApiResponse.Error -> {
+                    // Show error message
+                    Toast.makeText(this, "Failed to fetch products: ${response.exception.message}", Toast.LENGTH_LONG).show()
+                }
+            }
         }
 
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -32,12 +42,11 @@ class MainActivity : AppCompatActivity() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 // Filter the product list based on the search query
-                val filteredProducts = viewModel.products.value?.filter {
+                val filteredProducts = (viewModel.products.value as? ApiResponse.Success)?.data?.filter {
                     it.title.contains(newText ?: "", ignoreCase = true)
                 } ?: emptyList()
                 adapter.setProducts(filteredProducts)
                 return true
-
             }
         })
 
