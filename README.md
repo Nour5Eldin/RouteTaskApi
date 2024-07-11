@@ -42,6 +42,6 @@ RouteTaskApi is an Android application for creating and displaying a list of pro
    git clone https://github.com/Nour5Eldin/RouteTaskApi.git
 
 ## License
-- **This project is licensed under the MIT License. See the LICENSE file for details.
+- This project is licensed under the MIT License. See the LICENSE file for details.
 
 
