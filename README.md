@@ -39,7 +39,7 @@ RouteTaskApi is an Android application for creating and displaying a list of pro
 ## Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Nour5Eldin/RouteTaskApi.git
+    https://github.com/Nour5Eldin/RouteTaskApi.git
 
 ## License
 - This project is licensed under the MIT License. See the LICENSE file for details.
