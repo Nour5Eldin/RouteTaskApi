@@ -3,6 +3,8 @@ package com.noureldin.route
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.widget.SearchView
@@ -66,5 +68,15 @@ class MainActivity : AppCompatActivity() {
             binding.search.setQuery("",false)
             binding.search.isIconified = true
         }
+    }
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        hideKeyboard()
+        binding.search.clearFocus()
+        return  super.onTouchEvent(event)
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(binding.root.windowToken, 0)
     }
 }
