@@ -35,6 +35,7 @@ RouteTaskApi is an Android application for creating and displaying a list of pro
 - Architecture Components: ViewModel and LiveData
 - Dependency Injection: Using Dagger/Hilt (if applicable)
 - Error Handling: Handling network errors gracefully
+- SharedPreferences : Saving item product wishlist event as a Favourite product
 
 ## Setup
 1. Clone the repository:
