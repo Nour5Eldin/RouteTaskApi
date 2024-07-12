@@ -1,5 +1,6 @@
 package com.noureldin.route
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel : ProductViewModel by viewModels()
-    private val adapter = ProductAdapter(emptyList())
+    private val adapter: ProductAdapter by lazy { ProductAdapter(emptyList(), this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
