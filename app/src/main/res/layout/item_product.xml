@@ -139,6 +139,18 @@
                 app:layout_constraintStart_toEndOf="@id/review_value_tv"
                 app:layout_constraintTop_toTopOf="@id/review_value_tv" />
 
+            <TextView
+                android:id="@+id/product_count"
+                android:layout_width="30sp"
+                android:layout_height="25sp"
+                tools:text="0"
+                android:textColor="@color/DarkBlue"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/add_to_cart_btn"
+                app:layout_constraintEnd_toEndOf="@id/add_to_cart_btn"
+                app:layout_constraintBottom_toTopOf="@id/add_to_cart_btn" />
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/add_to_cart_btn"
                 android:layout_width="30dp"

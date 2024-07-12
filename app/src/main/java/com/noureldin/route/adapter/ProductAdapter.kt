@@ -3,6 +3,7 @@ package com.noureldin.route.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.noureldin.route.R
 import com.noureldin.route.databinding.ItemProductBinding
@@ -13,6 +14,7 @@ import com.noureldin.route.model.Product
 class ProductAdapter(private var products: List<Product>,private val context: Context) :RecyclerView.Adapter<ProductAdapter.ProductVH>() {
 
     private val wishlistPreferences = WishListPreferences(context)
+    private val productCountMap = mutableMapOf<Int, Int>()
     inner class ProductVH(private val binding: ItemProductBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(product: Product) {
             binding.product = product
@@ -44,6 +46,26 @@ class ProductAdapter(private var products: List<Product>,private val context: Co
                     R.drawable.ic_add
                 }
                 binding.wishlistIcon.setImageResource(newDrawable)
+            }
+            if (!productCountMap.containsKey(product.id)) {
+                productCountMap[product.id] = 0
+            }
+            binding.productCount.text = productCountMap[product.id].toString()
+
+            // Setup click listener for add to cart button
+            binding.addToCartBtn.setOnClickListener {
+                val currentCount = productCountMap[product.id] ?: 0
+                if (currentCount < 5) {
+                    val newCount = currentCount + 1
+                    productCountMap[product.id] = newCount
+                    binding.productCount.text = newCount.toString()
+                } else {
+                    Toast.makeText(
+                        context,
+                        "Sorry, you reached the limit of the product",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
         }
     }
