@@ -4,8 +4,6 @@
 RouteTaskApi is an Android application for creating and displaying a list of products using an API. This project demonstrates the use of modern Android development practices and libraries.
 
 ## Screen Shot
-
-<img width="375" alt="Screenshot 2024-07-11 at 2 32 58 PM" src="https://github.com/Nour5Eldin/RouteTaskApi/assets/145837378/95b258e5-109e-457d-b023-af1b352694b0">
 <img width="375" alt="Screenshot 2024-07-13 at 1 07 30 PM" src="https://github.com/user-attachments/assets/2169a96e-d6d2-4120-9d98-d9a36f6834fd">
 
 
