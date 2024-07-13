@@ -23,7 +23,7 @@ RouteTaskApi is an Android application for creating and displaying a list of pro
   - Retrofit for API calls
   - Glide for image loading
   - LiveData and ViewModel for data binding and lifecycle management
-  - 
+  - Room Database to save the Api data in memory offline
 ## Components
 - Activities: MainActivity
 - ViewModel: ProductViewModel
