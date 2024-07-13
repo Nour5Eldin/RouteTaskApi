@@ -14,6 +14,8 @@ RouteTaskApi is an Android application for creating and displaying a list of pro
 - Display products in a list
 - SearchView products in the list
 - Error handling for network issues
+- Adding the favorites button it change when interact
+- Adding the add button increases the number of product orders
 
 ## Tech Stack
 - **Programming Language**: Kotlin
